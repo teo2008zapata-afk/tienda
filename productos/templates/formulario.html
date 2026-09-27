@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Productos</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>
+            <label> Nombre:</label><br>
+            <input type="text" name="nombre" value="{{producto.nombre|default:''}}" required>
+        </p>
+        <p>
+            <label> Categoria:</label><br>
+            <input type="text" name="categoria" value="{{producto.categoria|default:''}}" required>
+        </p>
+        <p>
+            <label> Precio:</label><br>
+            <input type="number" name="precio" value="{{producto.precio|default:''}}" required>
+        </p>
+        <p>
+            <label> Cantidad:</label><br>
+            <input type="number" name="cantidad" value="{{producto.cantidad|default:''}}" required>
+        </p>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
