@@ -11,4 +11,12 @@ def crear(request):
         )
         Producto.save()
     return render(request, "formulario.html")
-    return render(request, "prueba.html")
+
+def listar(request):
+    #Traer todos los registros de la tabla contactos. #Select * from contactos
+    productos = producto.objects.all()
+    return render(
+        request,
+        "lista.html",
+        {"productos":productos}
+    )
