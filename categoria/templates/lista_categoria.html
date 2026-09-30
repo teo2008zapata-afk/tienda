@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Categorias</title>
+</head>
+<body>
+    <h1>Lista de Categorias</h1>
+    <a href="/categorias/">Nueva Categoria</a>
+    <hr>
+        {% for categoria in categorias %}
+            <h3>{{ categoria.nombre }}</h3>
+            <p>{{ categoria.observaciones }}</p>
+
+
+        <a href="/categoria/detalle/{{ categoria.id }}/">Ver</a>
+        <a href="/categoria/editar/{{ categoria.id }}/">Editar</a>
+        <a href="/categoria/eliminar/{{ categoria.id }}/">Eliminar</a>
+    <hr>
+
+    {% empty %}
+        <p>No hay Categorias.</p>
+    {% endfor %}
+
+</body>
+</html>

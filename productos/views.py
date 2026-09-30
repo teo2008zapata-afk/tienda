@@ -7,7 +7,8 @@ def crear(request):
             nombre = request.POST["nombre"],
             categoria = request.POST["categoria"],
             precio = request.POST["precio"],
-            cantidad = request.POST["cantidad"]
+            cantidad = request.POST["cantidad"],
+            estado = request.POST["estado"]
         )
         Producto.save()
     return render(request, "formulario.html")
@@ -37,6 +38,7 @@ def editar(request, id):
         Producto.categoria = request.POST["categoria"] #Cambiar la categoria del producto
         Producto.precio = request.POST["precio"] #Cambiar el precio del producto
         Producto.cantidad = request.POST["cantidad"] #Cambiar la cantidad del producto
+        Producto.estado = request.POST["estado"] #Cambiar el estado del producto
 
         Producto.save() #Guardar los cambios
 
@@ -56,6 +58,6 @@ def eliminar(request,id):
     Producto.delete() #DELETE * FROM producto WHERE id= 7
     return render(
             request,
-            "detalle.html",
+            "lista.html",
             {"Producto":Producto}
         )

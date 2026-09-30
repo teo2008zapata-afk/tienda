@@ -25,10 +25,14 @@
             <label> Cantidad:</label><br>
             <input type="number" name="cantidad" value="{{producto.cantidad|default:''}}" required>
         </p>
+        <p>
+            <label> Estado:</label><br>
+            <input type="text" name="estado" value="{{producto.estado|default:''}}" required>
+        </p>
         <button type="submit">Enviar</button>
         
         <a href="/productos/lista/">
-        Volver
+        Listado de Productos
         </a>
     </form>
 </body>
