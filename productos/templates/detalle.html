@@ -3,6 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <title>Detalle</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2f7, #d9e2ec);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #1f2937;
+}
+
+
+/* Título */
+h1 {
+    width: 500px;
+
+    background: white;
+
+    padding: 25px 30px 15px;
+
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 30px;
+
+    color: #111827;
+
+    border-radius: 18px 18px 0 0;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Información de cada producto */
+p {
+    width: 500px;
+
+    background: white;
+
+    padding: 16px 30px;
+
+    margin: 0;
+
+    font-size: 16px;
+
+    border-bottom: 1px solid #edf0f4;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+
+/* Efecto al pasar el mouse */
+p:hover {
+    background: #f8fafc;
+    padding-left: 35px;
+}
+
+
+/* Nombre de los campos */
+strong {
+    color: #64748b;
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* El <br> que tienes en el HTML */
+br {
+    display: none;
+}
+
+
+/* Enlaces */
+a {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 12px 25px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Primer enlace: Editar */
+a:first-of-type {
+    background: #2563eb;
+
+    color: white;
+
+    box-shadow: 0 5px 12px rgba(37, 99, 235, 0.25);
+}
+
+a:first-of-type:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
+}
+
+
+/* Segundo enlace: Volver */
+a:last-of-type {
+    background: white;
+
+    color: #475569;
+
+    border: 1px solid #d1d5db;
+
+    margin-left: 10px;
+}
+
+a:last-of-type:hover {
+    background: #f1f5f9;
+
+    color: #111827;
+
+    transform: translateY(-3px);
+}
+
+
+/* Espaciado que dejan los <br> */
+body > br {
+    display: none;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 550px) {
+
+    h1,
+    p {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 14px;
+        padding: 15px 20px;
+    }
+
+    a {
+        margin-top: 15px;
+    }
+}
+    </style>
 </head>
 <body>
 <h1>Detalle del contacto</h1>
